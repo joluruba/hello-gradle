@@ -1,5 +1,3 @@
-# Stack para los ejercicios con Gradle
+# Versión reducida:tiny de nuestro ejercicio anterior basado en Gradle
 
-1. Se parte de un backend que escucha por un puerto determinado e iremos agregando contenido y modificando su funcionamiento
-2. Se modifica Dockerfile utilizando MULTI STAGE BUILDS para mejorar la seguridad y acabar con una imagen que se adapta mas a los criterios en los que se basa DevOps
-3. En la rama: Tiny  del repositorio se alamacenará otra practica donde realizaremos una versión lo mas reducida posible de nuestro anterior ejercicio
+## Esta rama: Tiny es la versión reducida del anterior ejercicio y esta basado en la labor de Matthew Gilliard descrita en su blog: https://blog.gilliard.lol/2018/11/05/alpine-jdk11-images.html adantandola a nuestro proyecto de clase
