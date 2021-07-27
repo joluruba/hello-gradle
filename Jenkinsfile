@@ -8,8 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'construyendo gradle'
-                withGrandle {
-                    sh './gradle assemble'
+                withGradle {
+                    sh './gradlew assemble'
                 }
                 
             }
