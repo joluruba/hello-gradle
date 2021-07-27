@@ -1,18 +1,36 @@
 pipeline {
     agent any
+    options {
+        ansicolor('xterm')
+    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'construyendo gradle'
-                sh './gradle assemble'
+                whitGrandle {
+                    sh './gradle assemble'
+                }
+                
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: 'build/libs/*.jar'
+                }
             }
 
         }
-           stage('Archive') {
+           stage('Test') {
             steps {
-                echo 'Archivando aplicación'
-                archiveArtifacts artifacts: 'build/libs/*.jar'
+                echo 'Testeando'
+             
+            }
+            
+        }        
+        
+           stage('Deploy') {
+            steps {
+                echo 'Desplegando...'
             }
             
         }
