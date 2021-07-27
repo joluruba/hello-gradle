@@ -15,6 +15,7 @@ pipeline {
             }
             post {
                 success {
+                    slackSend channel: '#jenkins', message: 'Prueba', teamDomain: 'Ln', tokenCredentialId: '3faf711c-ac32-4d7a-95bb-2ab3398cd595'
                     archiveArtifacts artifacts: 'build/libs/*.jar'
                 }
             }
@@ -22,7 +23,7 @@ pipeline {
         }
            stage('Test') {
             steps {
-                echo 'Testeando'
+                
              
             }
             
