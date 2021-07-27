@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'construyendo gradle'
-                whitGrandle {
+                withGrandle {
                     sh './gradle assemble'
                 }
                 
