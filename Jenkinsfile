@@ -4,17 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''docker-compose build
-docker image tag app:latest hello-gradle:MAIN-1.0.${BUILD_NUMBER}-${GIT_COMMIT}
-'''
+                echo 'construyendo gradle'
+                sh './gradle assemble'
             }
 
         }
-           stage('Deploy') {
+           stage('Archive') {
             steps {
-                echo 'Desplegando aplicación'
-                sh '''
-docker-compose up -d'''
+                echo 'Archivando aplicación'
+                archiveArtifacts artifacts: 'build/libs/*.jar'
             }
             
         }
