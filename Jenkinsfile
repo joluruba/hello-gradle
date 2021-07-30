@@ -17,7 +17,7 @@ docker image tag app:latest hello-gradle:MAIN-1.0.${BUILD_NUMBER}-${GIT_COMMIT}
 docker-compose up -d'''
                 sshagent (credentials: ['08500816-7bda-4bb6-8374-b88b2b052bca']){
                   sh 'git tag MAIN-1.0.${BUILD_NUMBER}'
-                  sh 'git push MAIN-1.0.${BUILD_NUMBER}'
+                  sh 'git push origin MAIN-1.0.${BUILD_NUMBER}'
                 }
 
             }
