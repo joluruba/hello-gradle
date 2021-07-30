@@ -26,7 +26,6 @@ docker-compose up -d'''
              updateGitlabCommitStatus name: 'build', state: 'success'
           }
        }
-    }
     
 
 }
