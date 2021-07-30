@@ -28,7 +28,7 @@ docker-compose up -d'''
            stage('gitlabTag') {
             steps {
               echo 'TagGitLab'
-               gitlabCommitStatus name: 'verison1', build: 'projectId'
+               gitlabCommitStatus name: 'verison1'
           }
        }
     }
